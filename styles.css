@@ -110,7 +110,7 @@ label {
   text-overflow: ellipsis;
   width: 9rem;
   max-width: 50vw;
-  border: 2px solid;
+
 }
 #docname:hover{
   cursor:default !important;
