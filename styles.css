@@ -118,31 +118,28 @@ label {
 
  @media only screen and (max-width: 768px) {
       .container {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-      #soon {
-        font-size: 0.45rem;
-        ;
-      }
+  #soon {
+    font-size: 0.45rem;
+    ;
+  }
 
-      #docname {
-        width: 5rem;
-      }
+  #docname {
+    max-width: 5rem;
+  }
 
-      .box1 {
-        height: 50vh;
-      }
+  .box1 {
+    height: 50vh;
+  }
 
-      .box {
-        height: 99vh;
-      }
-
-      #docname {
-        max-width: 9rem;
-      }
-    }
+  .box2 {
+    height: 99vh;
+    border: none;
+  }
+ }
 
 #pencil {
   height: 18px;
