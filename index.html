@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="./icons/main.png" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Code Runner</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="popup">
+  </div>
+  <div class="header">
+    <div class="header_left">
+      <h1 class="logo">>_
+        <input type="text" name="" id="docname" onkeydown="counter()" onfocusout="pencilshow()" readonly
+          value="CodeRunner" autocomplete="off" /><img src="./icons/pencil.svg" id="pencil" alt=""
+          onclick="pencilhide(), pencil()" />
+      </h1>
+    </div>
+    <div class="header_right">
+      <span id="soon">
+        <h1 class="none">Arriving Soon</h1>
+      </span>
+      <button class="btn"><img src="./icons/setting.svg" id="settings" onclick="show_theme()" alt=""></button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="left">
+      <div class="box1">
+        <label for="htmlBox">HTML<span class="logohtml">/</span></label>
+        <textarea id="htmlBox" class="t_area" onkeyup="run()" onkeypress="load()"></textarea>
+      </div>
+      <div class="box1">
+        <label for="cssBox">CSS<span class="logocss">*</span></label>
+        <textarea id="cssBox" class="t_area" onkeyup="run()"></textarea>
+      </div>
+      <div class="box1">
+        <label for="jsBox">JS <span class="logojs">{}</span></label>
+        <textarea id="jsBox" class="t_area" onkeyup="run()"></textarea>
+      </div>
+    </div>
+    <div class="right">
+      <div class="box2">
+        <label for="outBox">Output <span class="logoout">-></span></label>
+        <iframe class="myframe" id="outBox"></iframe>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  // CODE FOR HTML CSS JS
+  function run() {
+    let htmlCode = document.getElementById("htmlBox").value;
+    let cssCode = document.getElementById("cssBox").value;
+    let jsCode = document.getElementById("jsBox").value;
+    let output = document.getElementById("outBox");
+    output.contentDocument.body.innerHTML =
+      htmlCode + "<style>" + cssCode + "</style>";
+    output.contentWindow.eval(jsCode);
+  }
+  // CODE FOR DOCUMENT TITLE
+  function pencil() {
+    let element = document.getElementById("docname");
+    let val = element.value;
+    element.removeAttribute("readonly");
+    element.focus(); //SETS FOCUS ON THE INPUTBOX//
+    if (val == "CodeRunner") {
+      document.getElementById("docname").value = "";
+    }
+    else {
+      document.getElementById("docname").value = value;
+    }
+  }
+  function pencilhide() {
+    document.getElementById("pencil").style.display = "none";
+  }
+  function pencilshow() {
+    let element = document.getElementById("pencil");
+    let value = document.getElementById("docname").value;
+    element.style.display = "inline-block";
+    value = value.trim();
+    if (value === "") {
+      document.getElementById('docname').style.width = 11 + "rem";
+      document.getElementById("docname").value = "CodeRunner";
+      document.getElementById("docname").setAttribute("readonly", ("true"));
+    } else {
+      document.getElementById("docname").value = value;
+      document.getElementById("docname").setAttribute("readonly", ("true"));
+    }
+  }
+
+  // COUNTER FOR AUTOSIZE DOCUMENT NAME
+  function counter() {
+    var name = document.getElementById('docname').value;
+    var len = name.length;
+    document.getElementById('docname').style.width = (2 + (len-1)) + "rem";
+  }
+  //**************************************************Current ISSUE Counter !!!!!//
+
+  /*UPCOMING FEATURES*/
+  function show_theme() {
+    document.getElementById("soon").style.display = "inline-block";
+    document.getElementById("settings").style.animation = "spin 0.5s ease-in-out";
+    setTimeout(hide_theme, 2000);
+
+  }
+  function hide_theme() {
+    document.getElementById("settings").style.animation = "spinx 0.5s ease-in-out";
+    document.getElementById("soon").style.display = "none";
+
+  }
+
+</script>
+
+</html>

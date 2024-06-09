@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  font-family: "Ubuntu Sans Mono", monospace;
+  font-style: normal;
+  background-color: #010101;
+}
+
+.header {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom: 2px solid #333743;
+}
+
+.header_right {
+  display: inline-flex;
+  align-self: center;
+  justify-content: left;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5px;
+}
+
+.left,
+.right {
+  display: grid;
+  gap: 4px;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  height: 29vh;
+  min-width: 20vh;
+  /* padding-left: 0.5rem; */
+  border-right: 2px solid;
+
+}
+
+.t_area {
+  background-color: #333743;
+  border: none;
+  height: 100%;
+  width: auto;
+  resize: none;
+  padding-left: 0.5rem;
+  color: white;
+}
+
+label {
+  display: flex;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.1rem;
+}
+
+.box2 {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  height: 88vh;
+  border: none;
+  border-top: none;
+  min-width: 20vh;
+  border-left: 2px solid #333743;
+}
+
+.myframe {
+  background-color: white;
+  color: #010101;
+  height: 100%;
+  width: auto;
+  padding-left: 0.5rem;
+  border: none;
+}
+
+.btn {
+  color: black;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.3rem;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0.3rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+#docname {
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-overflow: ellipsis;
+  width: 9rem;
+  max-width: 50vw;
+  border: 2px solid;
+}
+#docname:hover{
+  cursor:default !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+  #docname {
+    max-width: 9rem;
+  }
+}
+
+#pencil {
+  height: 18px;
+  margin-left: 0.3rem;
+}
+
+#pencil:hover {
+  filter: sepia(1);
+  animation: shake 0.3s ease-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(-15deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.bgc {
+  /*Background color for HTML CSS JS LABLES*/
+  background-color: #333743 !important;
+  margin-bottom: -2px;
+  margin-left: -0.5rem;
+  padding: 0 0.5rem;
+}
+
+.logohtml {
+  background-color: #FB3C41;
+  width: 19px;
+  text-align: center;
+  font-weight: bold;
+
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #010101;
+  border-radius: 0.3rem;
+  margin-left: 0.3rem;
+}
+
+.logocss {
+  background-color: #0EBEFF;
+  text-align: center;
+  line-height: 1.5;
+  width: 19px;
+  font-weight: bold;
+
+  font-size: 0.8rem;
+  color: #010101;
+  border-radius: 0.3rem;
+  margin-left: 0.3rem;
+}
+.logo:hover{
+  cursor: default;
+}
+.logojs {
+  background-color: #FCD000;
+  text-align: center;
+  line-height: 1.5;
+  width: 19px;
+  font-weight: bold;
+
+  font-size: 0.8rem;
+  color: #010101;
+  border-radius: 0.3rem;
+  margin-left: 0.3rem;
+}
+
+.logoout {
+  background-color: #47cf73;
+  line-height: 1.5;
+  text-align: center;
+  width: 19px;
+  font-weight: bold;
+  padding: 0.1rem;
+  font-size: 0.8rem;
+  color: #010101;
+  border-radius: 0.3rem;
+  margin-left: 0.3rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-left: 0.3rem;
+}
+
+#settings {
+  height: 32.5px;
+  background-color: white;
+  border-radius: 0.3rem;
+  animation: spinx 0.8s ease-in-out;
+}
+
+#settings:hover {
+  cursor: pointer;
+ 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(50deg);
+
+  }
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+}
+
+#soon {
+  font-size: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: #47cf73;
+  padding: 0 0.6rem;
+  display: none;
+  animation: show 0.5s ease-in;
+}
+@keyframes show {
+  0%{
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 100;
+  }
+  
+  50%{
+    opacity: 0;
+  }
+  
+}
+.none{
+  background-color: transparent;
+}
