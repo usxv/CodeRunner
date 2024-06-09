@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +13,6 @@
   <style>
   </style>
 </head>
-
 <body>
   <div class="popup">
   </div>
@@ -89,7 +87,7 @@
     element.style.display = "inline-block";
     value = value.trim();
     if (value === "") {
-      document.getElementById('docname').style.width = 11 + "rem";
+      // document.getElementById('docname').style.width = 11 + "rem";
       document.getElementById("docname").value = "CodeRunner";
       document.getElementById("docname").setAttribute("readonly", ("true"));
     } else {
@@ -99,11 +97,11 @@
   }
 
   // COUNTER FOR AUTOSIZE DOCUMENT NAME
-  function counter() {
-    var name = document.getElementById('docname').value;
-    var len = name.length;
-    document.getElementById('docname').style.width = (2 + (len-1)) + "rem";
-  }
+  // function counter() {
+  //   var name = document.getElementById('docname').value;
+  //   var len = name.length;
+  //   document.getElementById('docname').style.width = (2 + (len - 1)) + "rem";
+  // }
   //**************************************************Current ISSUE Counter !!!!!//
 
   /*UPCOMING FEATURES*/
@@ -111,14 +109,10 @@
     document.getElementById("soon").style.display = "inline-block";
     document.getElementById("settings").style.animation = "spin 0.5s ease-in-out";
     setTimeout(hide_theme, 2000);
-
   }
   function hide_theme() {
     document.getElementById("settings").style.animation = "spinx 0.5s ease-in-out";
     document.getElementById("soon").style.display = "none";
-
   }
-
 </script>
-
 </html>
