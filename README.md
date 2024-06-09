@@ -8,5 +8,5 @@ Welcome to Code Runner, your go-to online Integrated Development Environment (ID
 3. Better responsiveness
    
 **Isues/UpcomingFeatures**  
-1.Document rename textbox automatic Resize is stil an issue.  
-2.Wanted "emmet" like coloring for better user readability for HTML tags and separate color scheme for non-tag data. 
+1. The rename textbox isn't auto resizing according to the content written inside. Did a temporary fix.  
+2. Wanted "emmet" like coloring for better user readability for HTML tags and separate color scheme for non-tag data. 
