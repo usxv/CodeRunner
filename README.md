@@ -6,7 +6,7 @@ Welcome to Code Runner, your go-to online Integrated Development Environment (ID
 1. Updated overall design
 2. You can now name/rename your files
 3. Better responsiveness
-4. 
+   
 **Isues/UpcomingFeatures**  
 1.Document rename textbox automatic Resize is stil an issue.  
 2.Wanted "emmet" like coloring for better user readability for HTML tags and separate color scheme for non-tag data. 
